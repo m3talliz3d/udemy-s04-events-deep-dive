@@ -13,6 +13,8 @@ on:
       - master # only main
       - 'dev-*' # dev-new dev-this-new
       - 'feat/**' # feat/new featnew.button
+    paths-ignore:
+      - '.github/workflows/*'
 
 jobs:
   deploy:
