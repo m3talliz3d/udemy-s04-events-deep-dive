@@ -4,6 +4,11 @@ on:
     types:
       - opened
   workflow_dispatch:
+  push:
+    branches:
+      - master # only main
+      - 'dev-*' # dev-new dev-this-new
+      - 'feat/**' # feat/new featnew.button
 
 jobs:
   deploy:
