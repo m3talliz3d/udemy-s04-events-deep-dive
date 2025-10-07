@@ -1,4 +1,4 @@
-name: Lint ,Test and Deploy
+name: Events Demo
 on:
   pull_request:
     types:
