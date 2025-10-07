@@ -1,0 +1,23 @@
+name: Lint ,Test and Deploy
+on:
+  pull_request:
+    types:
+      - opened
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output event data
+        run: echo "${{ toJson(github.event) }}"
+      - name: Get Code
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci
+      - name: Run Test
+        run: npm run test
+      - name: Run Build
+        run: npm run build
+      - name: Deploy Project
+        run: echo "Deploying..."
