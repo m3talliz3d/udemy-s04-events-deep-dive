@@ -4,7 +4,7 @@ import HelpArea from './HelpArea';
 
 
 //My tests
-
+// Skipping CI action
 function MainContent() {
   const [helpVisible, setHelpVisible] = useState(false);
 
